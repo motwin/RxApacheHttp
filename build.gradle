@@ -1,14 +1,20 @@
 buildscript {
   repositories { jcenter() }
-  dependencies { classpath 'com.netflix.nebula:gradle-rxjava-project-plugin:1.12.+' }
+  dependencies { classpath 'com.netflix.nebula:gradle-rxjava-project-plugin:4.0.0' }
 }
 
-apply plugin: 'rxjava-project'
+
 apply plugin: 'java'
+apply plugin: 'nebula.rxjava-project'
+
+nebulaRelease {
+    addReleaseBranchPattern(/\d+\.\d+\.\d+/)
+    addReleaseBranchPattern('HEAD')
+}
 
 dependencies {
-    compile 'io.reactivex:rxjava:1.0.+'
-    compile 'org.apache.httpcomponents:httpclient:4.3'
-    compile 'org.apache.httpcomponents:httpcore-nio:4.3'
-    compile 'org.apache.httpcomponents:httpasyncclient:4.0'
+    compile 'io.reactivex:rxjava:1.2.0'
+    compile 'org.apache.httpcomponents:httpclient:4.5.2'
+    compile 'org.apache.httpcomponents:httpcore-nio:4.4.5'
+    compile 'org.apache.httpcomponents:httpasyncclient:4.1.2'
 }
