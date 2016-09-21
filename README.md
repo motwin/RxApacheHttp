@@ -111,6 +111,16 @@ data: {"type":"HystrixCommand","name":"GetPaymentInformationCommand","group":"Pa
 
 # How to build and publish to maven (Streamdata.io stuff)
 
+## First commit your changes
+
+```
+git commit
+git tag 0.21.2+streamdataio
+git push origin 0.21.2+streamdataio
+```
+
+## Publish
+
 ```./gradlew clean candidate publishToMavenLocal -Prelease.version=0.21.2-streamdataio```
 
 Since nebula (Netflix gradle plugins) is configured to publish to maven central, it will fail at the publication.
