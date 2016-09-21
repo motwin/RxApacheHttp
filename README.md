@@ -115,8 +115,8 @@ data: {"type":"HystrixCommand","name":"GetPaymentInformationCommand","group":"Pa
 
 ```
 git commit
-git tag 0.21.2+streamdataio
-git push origin 0.21.2+streamdataio
+git tag 0.21.2-streamdataio
+git push origin 0.21.2-streamdataio
 ```
 
 ## Publish
